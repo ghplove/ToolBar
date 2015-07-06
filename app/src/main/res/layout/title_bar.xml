@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titleBar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/titlebar_bg"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/titleBarAllLeftView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        >
+
+        <ImageView
+            android:id="@+id/titleBarLeftImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/back_black"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/titleBarLeftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/titleBarLeftImage"
+            android:background="@null"
+            android:paddingRight="30dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/titleBarCenterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:textColor="@color/titlebar_centertext"
+                android:textSize="17sp"
+                android:maxEms="8"
+                android:ellipsize="end"
+                />
+            <TextView
+                android:id="@+id/belowTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:singleLine="true"
+                android:text="xxxxxx"
+                android:visibility="gone"
+                android:textColor="@color/helperTextColor"
+                android:textSize="15sp"
+                android:maxEms="8"
+                android:ellipsize="end"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/titleBarProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/titleBarRightButton"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/titleBarRightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:singleLine="true"
+        android:textSize="15sp"
+        android:textColor="@color/mainTextColor"
+        />
+    <ImageView
+        android:id="@+id/titleBarRightImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="13dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:scaleType="center"
+        android:src="@mipmap/redpacket_query"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
